@@ -1,0 +1,10 @@
+nbformat
+nbclient
+ipykernel
+scikit-learn
+pandas
+numpy
+matplotlib
+nltk
+# optional, better explanation scoring
+sentence-transformers

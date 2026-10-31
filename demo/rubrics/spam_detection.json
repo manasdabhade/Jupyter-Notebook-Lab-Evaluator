@@ -1,0 +1,47 @@
+{
+  "reference": "Messages are cleaned and converted to a bag of words with CountVectorizer, which builds a vocabulary and represents each message as word counts. The data is split into training and test sets. A logistic regression classifier learns a weight for each word and applies the sigmoid function to output the probability of spam. Accuracy on the test set measures performance.",
+  "concepts": {
+    "text cleaning": [
+      "lower",
+      "punctuation",
+      "clean"
+    ],
+    "bag of words": [
+      "bag of words",
+      "word count",
+      "countvectorizer"
+    ],
+    "vocabulary": [
+      "vocabulary"
+    ],
+    "train/test split": [
+      "test set",
+      "held-out",
+      "hold out",
+      "split"
+    ],
+    "logistic regression": [
+      "logistic regression",
+      "sigmoid"
+    ],
+    "evaluation": [
+      "accuracy"
+    ]
+  },
+  "expected": [
+    {
+      "name": "accuracy >= 0.75",
+      "pattern": "accuracy\\D*([0-9.]+)",
+      "min": 0.75
+    },
+    {
+      "name": "new message flagged as spam",
+      "contains": "Prediction: spam"
+    }
+  ],
+  "tests": {
+    "model is logistic regression": "assert type(model).__name__ == 'LogisticRegression'",
+    "features are bag of words": "assert type(vectorizer).__name__ == 'CountVectorizer'",
+    "detects obvious spam": "assert model.predict(vectorizer.transform(['claim your free prize now']))[0] == 1"
+  }
+}

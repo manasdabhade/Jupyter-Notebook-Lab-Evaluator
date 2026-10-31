@@ -1,0 +1,4 @@
+{"reference": "K-Means starts with k centroids, assigns every point to its nearest centroid, then moves each centroid to the mean of its points, repeating until nothing changes. This minimises the within-cluster sum of squared distances. A silhouette score near 1 means the three clusters are compact and well separated.",
+ "concepts": {"centroids": ["centroid"], "assign to nearest": ["nearest", "closest"], "update to mean": ["mean"], "objective": ["squared distance", "inertia"], "silhouette": ["silhouette"]},
+ "expected": [{"name": "silhouette > 0.7", "pattern": "silhouette\\D*([0-9.]+)", "min": 0.7}],
+ "tests": {"KMeans with 3 clusters": "assert type(km).__name__ == 'KMeans' and km.n_clusters == 3"}}

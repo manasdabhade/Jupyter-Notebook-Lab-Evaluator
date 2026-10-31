@@ -1,0 +1,19 @@
+lab,submission,designed_as,should_flag,expected_band
+spam_detection,SP-01,"Strong submission: correct code, full explanation",False,A
+spam_detection,SP-02,Correct code; explanation describes a different algorithm,True,B-C
+spam_detection,SP-03,"Typo causing runtime errors, a cell never run, one-line explanation",False,F
+spam_detection,SP-04,Correct code; explanation is one sentence,False,B-C
+spam_detection,SP-05,"Correct code and explanation, plus a sentence naming a rejected alternative",False,A
+spam_detection,SP-06,Correct code; explanation paraphrased in plain words with few technical terms,False,A-B
+customer_segments,CS-01,"Strong submission: correct code, full explanation",False,A
+customer_segments,CS-02,Correct code; explanation describes a different algorithm,True,B-C
+customer_segments,CS-03,"Typo causing runtime errors, a cell never run, one-line explanation",False,F
+customer_segments,CS-04,Correct code; explanation is one sentence,False,B-C
+customer_segments,CS-05,"Correct code and explanation, plus a sentence naming a rejected alternative",False,A
+customer_segments,CS-06,Correct code; explanation paraphrased in plain words with few technical terms,False,A-B
+news_topics,NT-01,"Strong submission: correct code, full explanation",False,A
+news_topics,NT-02,Correct code; explanation describes a different algorithm,True,B-C
+news_topics,NT-03,"Typo causing runtime errors, a cell never run, one-line explanation",False,F
+news_topics,NT-04,Correct code; explanation is one sentence,False,B-C
+news_topics,NT-05,"Correct code and explanation, plus a sentence naming a rejected alternative",False,A
+news_topics,NT-06,Correct code; explanation paraphrased in plain words with few technical terms,False,A-B

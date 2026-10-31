@@ -1,0 +1,6 @@
+student,correctness (/35),output (/15),errors (/15),documentation (/15),explanation (/20),total (/100),grade,marks lost,"correct output, wrong explanation",lab,confidence,baseline_expl,improved_expl
+S016,35.0,15.0,15.0,13.9,20.0,98.9,A,documentation -1.1: too little written explanation,,text_classification,0.9,100,100
+S017,35.0,15.0,15.0,12.9,3.3,81.2,B,documentation -2.1: too little written explanation; explanation -16.7: describes a different algorithm than the code,"says lemmatization, code uses stemming, says logistic regression, code uses Naive Bayes, says bag of words, code uses TF-IDF",text_classification,0.6,100,16
+S020,23.3,0.0,4.5,5.2,0.3,33.3,F,"correctness -11.7: 1 of 3 tests failed; output -15.0: 2 expected result(s) missing; errors -10.5: 2 runtime error(s), cells not run; documentation -9.8: too little written explanation, functions lack docstrings; explanation -19.7: explanation too short",,text_classification,0.9,0,2
+S025,35.0,15.0,15.0,11.4,1.6,78.0,C,documentation -3.6: too little written explanation; explanation -18.4: describes a different algorithm than the code,"says hierarchical clustering, code uses K-Means",kmeans,0.7,40,8
+S026,35.0,15.0,15.0,11.7,20.0,96.7,A,documentation -3.3: too little written explanation,,kmeans,0.9,100,100

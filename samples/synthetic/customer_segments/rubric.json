@@ -1,0 +1,47 @@
+{
+  "reference": "The features are standardised. Agglomerative hierarchical clustering starts with every point as its own cluster and repeatedly merges the closest clusters; Ward linkage merges the pair that least increases within-cluster variance. The resulting dendrogram is cut at three clusters. The silhouette score measures how well separated the clusters are.",
+  "concepts": {
+    "scaling": [
+      "standardis",
+      "standardiz",
+      "scale"
+    ],
+    "bottom-up merging": [
+      "merge",
+      "merged",
+      "joined"
+    ],
+    "linkage": [
+      "linkage",
+      "ward"
+    ],
+    "dendrogram": [
+      "dendrogram",
+      "tree"
+    ],
+    "number of clusters": [
+      "three clusters",
+      "3 clusters",
+      "three groups"
+    ],
+    "silhouette": [
+      "silhouette"
+    ]
+  },
+  "expected": [
+    {
+      "name": "silhouette >= 0.5",
+      "pattern": "silhouette\\D*([0-9.]+)",
+      "min": 0.5
+    },
+    {
+      "name": "three clusters",
+      "contains": "3 clusters"
+    }
+  ],
+  "tests": {
+    "model is agglomerative": "assert type(model).__name__ == 'AgglomerativeClustering'",
+    "three clusters found": "assert len(set(labels)) == 3",
+    "features scaled": "assert abs(X_scaled.mean()) < 1e-6"
+  }
+}

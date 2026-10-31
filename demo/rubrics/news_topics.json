@@ -1,0 +1,42 @@
+{
+  "reference": "Headlines are represented with TF-IDF, which multiplies term frequency by inverse document frequency so rare, distinctive words get higher weight; stop words are removed. A linear support vector machine finds the maximum-margin hyperplane separating the topics, one-vs-rest. Cross-validation estimates accuracy on unseen data.",
+  "concepts": {
+    "tf-idf": [
+      "tf-idf",
+      "inverse document frequency"
+    ],
+    "stop words": [
+      "stop word"
+    ],
+    "svm": [
+      "support vector",
+      "svm"
+    ],
+    "margin": [
+      "margin"
+    ],
+    "cross-validation": [
+      "cross-validation",
+      "fold"
+    ],
+    "accuracy": [
+      "accuracy"
+    ]
+  },
+  "expected": [
+    {
+      "name": "mean accuracy >= 0.6",
+      "pattern": "mean accuracy\\D*([0-9.]+)",
+      "min": 0.6
+    },
+    {
+      "name": "sport headline classified",
+      "contains": "striker scores in cup final -> sport"
+    }
+  ],
+  "tests": {
+    "features are TF-IDF": "assert type(vectorizer).__name__ == 'TfidfVectorizer'",
+    "model is a linear SVM": "assert type(model).__name__ == 'LinearSVC'",
+    "three topics learned": "assert len(model.classes_) == 3"
+  }
+}
